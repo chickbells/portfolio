@@ -1,29 +1,39 @@
-<html lang="en"><head><meta charset="UTF-8">
-<title>Portfolio</title><link rel="icon" href="rabbit_yinyang.svg" type="image/svg+xml" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<title>Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://unpkg.com/lucide@latest"></script>
 <style>
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bella van der Sluijs | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="logo">LOGO HERE</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Connect</a></li>
-      </ul>
-    </div>
-  </nav>
-
+body { font-family: 'Inter', sans-serif; }
+.fade-in { opacity: 0; transform: translateY(32px) scale(0.98); animation: fadeIn .7s cubic-bezier(.7,.09,.29,1.09) forwards;}
+.fade-in-1 { animation-delay: .1s }
+.fade-in-2 { animation-delay: .22s }
+.fade-in-3 { animation-delay: .34s }
+.fade-in-4 { animation-delay: .48s }
+.fade-in-5 { animation-delay: .62s }
+.fade-in-c1 { animation-delay: .8s }
+.fade-in-c2 { animation-delay: 1s }
+.fade-in-c3 { animation-delay: 1.2s }
+.fade-in-c4 { animation-delay: 1.4s }
+@keyframes fadeIn { to { opacity: 1; transform: none; } }
+.card-hover:hover,
+.card-hover:focus-visible {
+box-shadow: 0 8px 32px 0 rgba(255,255,255,0.10), 0 1.5px 3px rgba(0,0,0,0.12);
+border-color: rgba(255,255,255,0.22);
+background-color: rgba(52,59,70,0.20);
+outline: 2px solid rgba(255,255,255,0.10);
+outline-offset: 0;
+transition: all .18s cubic-bezier(.4,0,.2,1);
+}
+.card-img { transition: filter .3s cubic-bezier(.4,0,.2,1), transform .3s cubic-bezier(.4,0,.2,1);}
+.card-hover:hover .card-img,
+.card-hover:focus-visible .card-img {
+filter: brightness(1.15) blur(0.5px);
+transform: scale(1.025) rotate(-1deg);
+}
+.action-btn:focus-visible {
+outline: 2px solid #fff;
+outline-offset: 2px;
+}
