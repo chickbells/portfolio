@@ -4,10 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bella van der Sluijs | Portfolio</title>
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -17,151 +14,184 @@
 
     body {
       font-family: 'Space Grotesk', sans-serif;
-      background: #fff;
-      color: #111;
-      padding: 2rem;
+      background-color: #e5e5e5;
+      color: white;
     }
 
     .navbar {
       background-color: #111;
-      color: white;
-      border-radius: 9999px;
       padding: 1rem 2rem;
+      margin: 2rem auto;
+      max-width: 90%;
+      border-radius: 2rem;
+      box-shadow: 4px 4px 0 #d1d1d1;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 4px 4px 0 rgba(0,0,0,0.15);
-      max-width: 900px;
-      margin: 0 auto 2rem;
     }
 
     .nav-links {
       display: flex;
       gap: 2rem;
       list-style: none;
-      align-items: center;
     }
 
     .nav-links a {
       color: white;
       text-decoration: none;
       font-weight: 500;
+      font-size: 0.95rem;
     }
 
-    .nav-links .connect-btn {
+    .connect-button {
       border: 2px solid white;
-      padding: 0.3rem 1rem;
-      border-radius: 9999px;
+      border-radius: 2rem;
+      padding: 0.2rem 1rem;
     }
 
-    .hero-container {
-      background-color: #111;
-      color: white;
-      border-radius: 2.5rem;
-      padding: 2.5rem;
-      max-width: 960px;
-      margin: 0 auto;
-      box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+    .main-shape-wrapper {
       position: relative;
+      width: 90%;
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+
+    .main-shape {
+      width: 100%;
+      border-radius: 2.5rem;
+      box-shadow: 5px 5px 0 #d1d1d1;
+      display: block;
+    }
+
+    .main-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 2.5rem;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .pill-label {
-      background-color: #222;
-      display: inline-block;
-      color: white;
-      padding: 0.5rem 1.5rem;
-      border-radius: 9999px;
-      font-size: 0.9rem;
+      background-color: #1c1c1c;
+      padding: 0.6rem 1.5rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      width: fit-content;
+      box-shadow: 4px 4px 0 #d1d1d1;
+      margin-bottom: 1.5rem;
+    }
+
+    .collaborate-text {
       font-weight: 500;
-      box-shadow: 4px 4px 0 rgba(0,0,0,0.15);
+      letter-spacing: 0.4em;
+      text-align: right;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-sub {
+      font-size: 0.9rem;
+      background-color: transparent;
+      border: 2px solid white;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      width: fit-content;
       margin-bottom: 1.5rem;
     }
 
     .hero-heading {
       font-size: 3rem;
       font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .hero-sub {
-      font-size: 1rem;
-      margin-bottom: 2rem;
-      border: 2px solid white;
-      padding: 0.5rem 1rem;
-      border-radius: 9999px;
-      display: inline-block;
     }
 
     .call-to-action {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 2rem;
-    }
-
-    .purple-box {
-      background: #c084fc;
-      border-radius: 2rem;
-      flex: 1;
-      height: 180px;
+      margin-top: 2rem;
     }
 
     .view-button {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
       background: white;
       color: black;
-      font-weight: bold;
-      border-radius: 9999px;
-      padding: 0.75rem 1.25rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-size: 1rem;
       border: none;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1rem;
       cursor: pointer;
+      gap: 1rem;
+      box-shadow: 4px 4px 0 #d1d1d1;
     }
 
-    .arrow-circle {
-      width: 36px;
-      height: 36px;
-      border: 2px solid black;
-      border-radius: 50%;
+    .view-button .arrow-circle {
+      background: #111;
+      color: white;
+      border-radius: 999px;
+      width: 1.5rem;
+      height: 1.5rem;
       display: flex;
-      justify-content: center;
       align-items: center;
-      font-size: 1rem;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .purple-box {
+      background: #cc77ff;
+      border-radius: 1.5rem;
+      width: 180px;
+      height: 180px;
+      border: 8px solid white;
+    }
+
+    @media (max-width: 768px) {
+      .hero-heading {
+        font-size: 2rem;
+      }
+      .call-to-action {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .purple-box {
+        width: 100%;
+        height: 120px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- NAVBAR -->
   <nav class="navbar">
-    <div class="logo">LOGO HERE</div>
+    <div style="font-weight: 600;">LOGO HERE</div>
     <ul class="nav-links">
       <li><a href="#">About</a></li>
       <li><a href="#">Projects</a></li>
-      <li><a href="#" class="connect-btn">Connect</a></li>
-      <li><span>➜</span></li>
+      <li><a class="connect-button" href="#">Connect</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <div class="hero-container">
-    <div class="pill-label">Bella van der Sluijs | Brand Strategist, Marketer & Design</div>
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-      <div style="font-weight: 500; letter-spacing: 0.2em;">COLLABORATE</div>
-    </div>
-
-    <p class="hero-sub">Turn your ideas, into material products.</p>
-
-    <h1 class="hero-heading">PORTFOLIO</h1>
-
-    <div class="call-to-action">
-      <button class="view-button">
-        VIEW
-        <span class="arrow-circle">➜</span>
-      </button>
-      <div class="purple-box"></div>
+  <!-- HERO SECTION -->
+  <div class="main-shape-wrapper">
+    <img src="container.svg" class="main-shape" alt="Container Background" />
+    <div class="main-content">
+      <div class="pill-label">Bella van der Sluijs | Brand Strategist, Marketer & Design</div>
+      <div class="collaborate-text">COLLABORATE</div>
+      <p class="hero-sub">Turn your ideas, into material products.</p>
+      <h1 class="hero-heading">PORTFOLIO</h1>
+      <div class="call-to-action">
+        <button class="view-button">
+          VIEW
+          <span class="arrow-circle">➜</span>
+        </button>
+        <div class="purple-box"></div>
+      </div>
     </div>
   </div>
 
