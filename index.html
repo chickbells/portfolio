@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bella van der Sluijs | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
 
   <style>
     * {
@@ -12,72 +14,156 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0a0a0a;
-      color: white;
-      line-height: 1.6;
+      font-family: 'Space Grotesk', sans-serif;
+      background: #fff;
+      color: #111;
+      padding: 2rem;
     }
+
     .navbar {
       background-color: #111;
+      color: white;
+      border-radius: 9999px;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.15);
+      max-width: 900px;
+      margin: 0 auto 2rem;
     }
-    .logo {
-      font-weight: bold;
-      font-size: 1.2rem;
-      color: #ccff00;
-    }
+
     .nav-links {
       display: flex;
       gap: 2rem;
       list-style: none;
+      align-items: center;
     }
+
     .nav-links a {
       color: white;
       text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    .nav-links a:hover {
-      color: #ccff00;
-    }
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.8s ease-out forwards;
+      font-weight: 500;
     }
 
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .nav-links .connect-btn {
+      border: 2px solid white;
+      padding: 0.3rem 1rem;
+      border-radius: 9999px;
     }
-    footer {
-      text-align: center;
-      padding: 2rem;
+
+    .hero-container {
       background-color: #111;
-      margin-top: 4rem;
+      color: white;
+      border-radius: 2.5rem;
+      padding: 2.5rem;
+      max-width: 960px;
+      margin: 0 auto;
+      box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+      position: relative;
+    }
+
+    .pill-label {
+      background-color: #222;
+      display: inline-block;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 9999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.15);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-heading {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      border: 2px solid white;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      display: inline-block;
+    }
+
+    .call-to-action {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .purple-box {
+      background: #c084fc;
+      border-radius: 2rem;
+      flex: 1;
+      height: 180px;
+    }
+
+    .view-button {
+      background: white;
+      color: black;
+      font-weight: bold;
+      border-radius: 9999px;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .arrow-circle {
+      width: 36px;
+      height: 36px;
+      border: 2px solid black;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
     }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
+
+  <!-- Navigation -->
   <nav class="navbar">
-    <div class="logo">Bella van der Sluijs</div>
+    <div class="logo">LOGO HERE</div>
     <ul class="nav-links">
       <li><a href="#">About</a></li>
       <li><a href="#">Projects</a></li>
-      <li><a href="#">Connect</a></li>
+      <li><a href="#" class="connect-btn">Connect</a></li>
+      <li><span>➜</span></li>
     </ul>
   </nav>
 
-  <!-- Portfolio Section -->
-  <section class="fade-up" style="background:#111; border-radius:2rem; margin: 2rem auto; padding: 3rem; max-width: 700px; box-shadow: 0 6px 20px rgba(0,0,0,0.3);">
-    <h2 style="font-size:2.5rem;">PORTFOLIO</h2>
-    <p style="margin-top:1rem;">Turn your ideas into material products.</p>
-  </section>
+  <!-- Hero Section -->
+  <div class="hero-container">
+    <div class="pill-label">Bella van der Sluijs | Brand Strategist, Marketer & Design</div>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+      <div style="font-weight: 500; letter-spacing: 0.2em;">COLLABORATE</div>
+    </div>
+
+    <p class="hero-sub">Turn your ideas, into material products.</p>
+
+    <h1 class="hero-heading">PORTFOLIO</h1>
+
+    <div class="call-to-action">
+      <button class="view-button">
+        VIEW
+        <span class="arrow-circle">➜</span>
+      </button>
+      <div class="purple-box"></div>
+    </div>
+  </div>
+
+</body>
+</html>
